@@ -7,7 +7,7 @@ import AnimeCarousel from './AnimeCarousel';
 import Footer from './Footer';
 import { getWatchHistory, formatTime } from '../utils/watchHistory';
 
-const DAY_ORDER = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+const DAY_ORDER = ['Chủ Nhật', 'Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7'];
 
 const Home = () => {
   const [homeData, setHomeData] = useState(null);
@@ -139,14 +139,14 @@ const Home = () => {
           <div style={{ background: 'var(--color-surface)', border: '2px solid var(--color-primary)', borderRadius: '20px', padding: '32px 28px', maxWidth: '440px', width: '100%', textAlign: 'center', position: 'relative', boxShadow: '0 0 40px rgba(147,51,234,0.3)' }} onClick={e => e.stopPropagation()}>
             <button onClick={() => setShowDonatePopup(false)} style={{ position: 'absolute', top: '12px', right: '16px', background: 'none', border: 'none', color: 'var(--color-text-muted)', fontSize: '1.3rem', cursor: 'pointer' }}>✕</button>
             <div style={{ fontSize: '3.5rem', marginBottom: '12px' }}>☕</div>
-            <h2 style={{ fontSize: 'var(--text-xl)', fontWeight: 900, marginBottom: '8px' }}>Suka MrFunk?</h2>
+            <h2 style={{ fontSize: 'var(--text-xl)', fontWeight: 900, marginBottom: '8px' }}>LuanOri Watch Anime</h2>
             <p style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)', marginBottom: '20px', lineHeight: 1.7 }}>
-              Kalau kamu suka nonton di sini, boleh dong trakteer kita biar makin semangat update! 💜
+              Nếu bạn thích xem ở đây, hãy tặng chúng tôi một món quà đặc biệt để cảm ơn vì đã luôn cập nhật thông tin cho bạn! 💜
             </p>
             <a href="https://teer.id/anrizz" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', marginBottom: '10px', padding: '14px', fontSize: 'var(--text-base)', borderRadius: '12px' }}>
-              ☕ Trakteer Sekarang
+              ☕ Ủng Hộ
             </a>
-            <button onClick={() => setShowDonatePopup(false)} style={{ background: 'none', border: 'none', color: 'var(--color-text-dim)', fontSize: 'var(--text-xs)', cursor: 'pointer', marginTop: '4px', padding: '8px' }}>Nanti aja deh →</button>
+            <button onClick={() => setShowDonatePopup(false)} style={{ background: 'none', border: 'none', color: 'var(--color-text-dim)', fontSize: 'var(--text-xs)', cursor: 'pointer', marginTop: '4px', padding: '8px' }}>Sau →</button>
           </div>
         </div>
       )}
@@ -154,11 +154,11 @@ const Home = () => {
       {/* Hero */}
       <header className="page-header home-hero home-hero--streaming">
         <div className="home-hero-copy">
-          <h1 className="main-title text-gradient" data-text="MRFUNK">MRFUNK</h1>
-          <p className="subtitle">Tempat nonton anime & donghua sub Indo paling lengkap. Gratis, tanpa ribet.</p>
+          <h1 className="main-title text-gradient" data-text="LuanOri Anime">LuanOri Anime</h1>
+          <p className="subtitle">Đây là nơi toàn diện nhất để xem anime. Miễn phí, không rắc rối.</p>
           <div className="home-hero-actions">
-            <Link to="/search" className="btn btn-primary">🔍 Cari Anime</Link>
-            <Link to="/ongoing" className="btn btn-secondary">📺 Sedang Tayang</Link>
+            <Link to="/search" className="btn btn-primary">🔍 Tìm kiếm Anime</Link>
+            <Link to="/ongoing" className="btn btn-secondary">📺 Đang hiển thị</Link>
           </div>
         </div>
         {ongoing.length > 0 && (
@@ -172,7 +172,7 @@ const Home = () => {
       {watchHistory.length > 0 && (
         <section className="section home-rail">
           <div className="section-header home-rail-header">
-            <h2 className="section-title">🕐 Lanjut Tonton</h2>
+            <h2 className="section-title">🕐 Tiếp tục theo dõi</h2>
             <Link to="/history" className="view-all">Lihat semua</Link>
           </div>
           <div className="home-rail-scroll">
@@ -204,25 +204,25 @@ const Home = () => {
       {/* Anime sections */}
       {ongoing.length > 0 && (
         <section className="section home-rail">
-          <div className="section-header home-rail-header"><h2 className="section-title">🔥 Anime Sedang Tayang</h2><Link to="/ongoing" className="view-all">Lihat semua</Link></div>
+          <div className="section-header home-rail-header"><h2 className="section-title">🔥 Anime đang phát sóng</h2><Link to="/ongoing" className="view-all">Lihat semua</Link></div>
           <div className="home-rail-scroll">{buildRailItems(ongoing, 'Ongoing')}</div>
         </section>
       )}
       {donghuaOngoing.length > 0 && (
         <section className="section home-rail">
-          <div className="section-header home-rail-header"><h2 className="section-title">🐉 Donghua Sedang Tayang</h2><Link to="/donghua-ongoing" className="view-all">Lihat semua</Link></div>
+          <div className="section-header home-rail-header"><h2 className="section-title">🐉 Phim hoạt hình đang chiếu</h2><Link to="/donghua-ongoing" className="view-all">Lihat semua</Link></div>
           <div className="home-rail-scroll">{buildRailItems(donghuaOngoing, 'Ongoing', true)}</div>
         </section>
       )}
       {completed.length > 0 && (
         <section className="section home-rail">
-          <div className="section-header home-rail-header"><h2 className="section-title">✅ Anime Baru Selesai</h2><Link to="/completed" className="view-all">Lihat semua</Link></div>
+          <div className="section-header home-rail-header"><h2 className="section-title">✅ Anime mới đã hoàn thành</h2><Link to="/completed" className="view-all">Lihat semua</Link></div>
           <div className="home-rail-scroll">{buildRailItems(completed, 'Completed')}</div>
         </section>
       )}
       {donghuaCompleted.length > 0 && (
         <section className="section home-rail">
-          <div className="section-header home-rail-header"><h2 className="section-title">🐉 Donghua Baru Selesai</h2><Link to="/donghua-completed" className="view-all">Lihat semua</Link></div>
+          <div className="section-header home-rail-header"><h2 className="section-title">🐉 Phim hoạt hình mới đã hoàn thành</h2><Link to="/donghua-completed" className="view-all">Lihat semua</Link></div>
           <div className="home-rail-scroll">{buildRailItems(donghuaCompleted, 'Completed', true)}</div>
         </section>
       )}
@@ -230,7 +230,7 @@ const Home = () => {
       {/* Schedule Summary */}
       {days.length > 0 && (
         <section className="section">
-          <div className="section-header"><h2 className="section-title">📅 Jadwal Tayang</h2><Link to="/schedule" className="view-all">Buka jadwal</Link></div>
+          <div className="section-header"><h2 className="section-title">📅 Lịch phát sóng</h2><Link to="/schedule" className="view-all">LỊCH TRÌNH MỞ</Link></div>
           <div className="schedule-summary">
             <table>
               <thead><tr><th>Hari</th><th>Total</th><th>Aksi</th></tr></thead>
@@ -253,8 +253,8 @@ const Home = () => {
       {topDonors.length > 0 && (
         <section className="section">
           <div className="section-header">
-            <h2 className="section-title">💜 Top Donatur</h2>
-            <a href="https://teer.id/anrizz" target="_blank" rel="noopener noreferrer" className="view-all">Donasi juga →</a>
+            <h2 className="section-title">💜 Những nhà tài trợ hàng đầu</h2>
+            <a href="https://facebook.com/LuanOri" target="_blank" rel="noopener noreferrer" className="view-all">HÃY QUYÊN GÓP NỮA NHÉ →</a>
           </div>
           <div style={{ background: 'var(--color-surface)', border: '2px solid var(--color-border)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
             {topDonors.slice(0, 5).map((donor, idx) => (
@@ -263,12 +263,12 @@ const Home = () => {
                   {idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `#${idx + 1}`}
                 </span>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontWeight: 700, fontSize: 'var(--text-sm)' }}>{donor.creator_name || 'Anonim'}</div>
+                  <div style={{ fontWeight: 700, fontSize: 'var(--text-sm)' }}>{donor.creator_name || 'Hoàng Luân (LuanOri)'}</div>
                   {donor.support_message && <div style={{ fontSize: 'var(--text-xs)', color: 'var(--color-text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{donor.support_message}</div>}
                 </div>
                 <div style={{ textAlign: 'right', flexShrink: 0 }}>
                   <div style={{ fontWeight: 700, fontSize: 'var(--text-sm)', color: 'var(--color-primary)' }}>{donor.quantity}x {donor.unit_name}</div>
-                  <div style={{ fontSize: 'var(--text-xs)', color: 'var(--color-text-dim)' }}>Rp {(donor.amount || 0).toLocaleString('id-ID')}</div>
+                  <div style={{ fontSize: 'var(--text-xs)', color: 'var(--color-text-dim)' }}>Vnd {(donor.amount || 0).toLocaleString('id-ID')}</div>
                 </div>
               </div>
             ))}
