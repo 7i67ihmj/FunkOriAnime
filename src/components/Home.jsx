@@ -143,7 +143,7 @@ const Home = () => {
             <p style={{ color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)', marginBottom: '20px', lineHeight: 1.7 }}>
               Nếu bạn thích xem ở đây, hãy tặng chúng tôi một món quà đặc biệt để cảm ơn vì đã luôn cập nhật thông tin cho bạn! 💜
             </p>
-            <a href="https://teer.id/anrizz" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', marginBottom: '10px', padding: '14px', fontSize: 'var(--text-base)', borderRadius: '12px' }}>
+            <a href="https://facebook.com/LuanOri" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', marginBottom: '10px', padding: '14px', fontSize: 'var(--text-base)', borderRadius: '12px' }}>
               ☕ Ủng Hộ
             </a>
             <button onClick={() => setShowDonatePopup(false)} style={{ background: 'none', border: 'none', color: 'var(--color-text-dim)', fontSize: 'var(--text-xs)', cursor: 'pointer', marginTop: '4px', padding: '8px' }}>Sau →</button>
