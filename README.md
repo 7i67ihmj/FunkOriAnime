@@ -1,6 +1,6 @@
 <div align="center">
   <img src="public/logo.png" alt="LuanOri MrFunk" width="120" />
-  <h1> LuanOri LuanOri MrFunk</h1>
+  <h1> LuanOri MrFunk</h1>
   <p><b>Xem anime và donghua có phụ đề tiếng Indonesia — tại một nơi, từ tất cả các nhà cung cấp.</b></p>
 
   ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
