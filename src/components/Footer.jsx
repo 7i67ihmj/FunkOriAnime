@@ -8,7 +8,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   const handleSendReport = () => {
-    const subject = encodeURIComponent('[MrFunk] Laporan Bug');
+    const subject = encodeURIComponent('[LuanOri Anime] Laporan Bug');
     const body = encodeURIComponent(`Bug:\n\n${reportText || '(Jelaskan masalah)'}\n\n---\nURL: ${window.location.href}`);
     window.location.href = `mailto:?subject=${subject}&body=${body}`;
     setShowReport(false);
@@ -23,13 +23,13 @@ const Footer = () => {
           {/* Brand */}
           <div className="footer-brand-section">
             <Link to="/" className="footer-brand-link">
-              <img src="/logo.png" alt="MrFunk" className="footer-logo-img" />
-              <span className="footer-brand-name">MrFunk</span>
+              <img src="/logo.png" alt="LuanOri Anime" className="footer-logo-img" />
+              <span className="footer-brand-name">LuanOri Anime</span>
             </Link>
             <p className="footer-tagline">
-              Tempat nonton anime & donghua sub Indo paling lengkap. Gratis, kualitas terbaik.
+              Đây là nơi toàn diện nhất để xem anime và donghua. Miễn phí, chất lượng cao.
             </p>
-            <a href="https://teer.id/anrizz" target="_blank" rel="noopener noreferrer" className="footer-donate-btn">
+            <a href="https://facebook.com/LuanOri" target="_blank" rel="noopener noreferrer" className="footer-donate-btn">
               ☕ Dukung Kami
             </a>
           </div>
@@ -53,14 +53,14 @@ const Footer = () => {
             <div className="footer-col">
               <h4 className="footer-col-title">Bantuan</h4>
               <button type="button" className="footer-link footer-link-btn" onClick={() => setShowReport(true)}>Lapor Bug</button>
-              <a href="https://teer.id/anrizz" target="_blank" rel="noopener noreferrer" className="footer-link">Donasi</a>
+              <a href="https://facebook.com/LuanOri" target="_blank" rel="noopener noreferrer" className="footer-link">Donasi</a>
             </div>
           </div>
 
           {/* Bottom */}
           <div className="footer-bottom">
-            <p className="footer-copy">© {year} MrFunk. All rights reserved.</p>
-            <p className="footer-disclaimer">MrFunk adalah platform streaming anime gratis. Kami tidak menyimpan file video di server kami.</p>
+            <p className="footer-copy">© {year} LuanOri Anime. All rights reserved.</p>
+            <p className="footer-disclaimer">LuanOri Anime Đây là một nền tảng xem phim hoạt hình trực tuyến miễn phí. Chúng tôi không lưu trữ các tệp video trên máy chủ của mình.</p>
           </div>
         </div>
       </footer>
